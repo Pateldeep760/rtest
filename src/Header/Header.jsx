@@ -10,7 +10,7 @@ import './Header.css'
 
 function Header(){
     return(
-        <h1>Header2222</h1>
+        <h1>This is a main Header</h1>
 
     )
     
