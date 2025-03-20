@@ -1,0 +1,12 @@
+@import '../Mixin.scss';
+
+.content{
+h1{
+    background-color: rgb(222, 230, 173);
+}
+
+
+button{
+@include btn(grey)
+}
+}
