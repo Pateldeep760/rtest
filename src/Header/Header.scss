@@ -1,0 +1,7 @@
+@import '../Mixin.scss';
+
+.MainHeader {
+    h1 {
+        @include bgc(pink);
+    }
+}

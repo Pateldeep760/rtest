@@ -8,3 +8,7 @@
         color: white;
     }
 }
+
+@mixin bgc($bg){
+    background-color: $bg;
+}

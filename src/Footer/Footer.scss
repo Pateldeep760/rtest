@@ -1,0 +1,9 @@
+@import '../Mixin.scss';
+
+
+.Mainfooter{
+
+    h1{
+        @include bgc(lightgreen);
+    }
+}

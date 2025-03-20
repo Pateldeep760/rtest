@@ -2,7 +2,7 @@
 
 .content{
 h1{
-    background-color: rgb(222, 230, 173);
+    @include bgc(salmon);
 }
 
 

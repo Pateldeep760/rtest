@@ -1,10 +1,12 @@
-import './Footer.css'
+import './Footer.scss'
 
 
 const Footer=()=>{
 
     return(
-        <h1>this is a Footer</h1>
+        <div class = "Mainfooter">
+            <h1>This is a Footer</h1>
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-import './Header.css'
+import './Header.scss'
 
 // const Header=()=> {
 
@@ -10,8 +10,9 @@ import './Header.css'
 
 function Header(){
     return(
+        <div class = "MainHeader">
         <h1>This is a main Header</h1>
-
+        </div>
     )
     
 }
