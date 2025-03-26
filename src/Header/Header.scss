@@ -1,7 +1,12 @@
 @import '../Mixin.scss';
 
-.MainHeader {
-    h1 {
-        @include bgc(pink);
+.header-m {
+    
+    @include bgc(wheat);
+
+    button{
+        margin: 10px 10px;
     }
 }
+
+

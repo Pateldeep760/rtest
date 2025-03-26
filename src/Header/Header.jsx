@@ -1,20 +1,17 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Header.scss'
 
-// const Header=()=> {
+const Header = () => {
+    const ab = useNavigate()
+  return (
+    <div className='header-m'>
+        <button onClick={()=>ab('/Content')}>Main Content</button>
+        <button onClick={()=>ab('/')}>header</button>
+        <button onClick={()=>ab('/Footer')}>Footer</button>
 
-//     return(
-//         <h1>Header111</h1>
-//     )
-// }
-
-
-function Header(){
-    return(
-        <div class = "MainHeader">
-        <h1>This is a main Header</h1>
-        </div>
-    )
-    
+    </div>
+  )
 }
 
-export default Header 
+export default Header
