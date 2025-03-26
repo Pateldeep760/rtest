@@ -21,6 +21,7 @@ root.render(
     <BrowserRouter>
       <Header/>
       <Routes>
+        <Route path='/' element={<Content />} />
         <Route path='/content' element={<Content />} />
         <Route path='/content2' element={<Content2 />} />
         <Route path='/content3' element={<Content3 />} />
