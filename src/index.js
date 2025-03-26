@@ -9,6 +9,8 @@ import Content from './Content/Content';
 import Footer from './Footer/Footer';
 import App from './App'
 import Nopage from './Nopage/Nopage'
+import Content2 from './Content2/Content2'
+import Content3 from './Content3/Content3'
 
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -17,13 +19,14 @@ root.render(
   <React.StrictMode>
     
     <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route path='/' element={<Header />} />
         <Route path='/content' element={<Content />} />
-        <Route path='/footer' element={<Footer />} />
+        <Route path='/content2' element={<Content2 />} />
+        <Route path='/content3' element={<Content3 />} />
         <Route path='*' element={<Nopage />} />
-  
       </Routes>
+      <Footer/>
     </BrowserRouter>
 
   </React.StrictMode>

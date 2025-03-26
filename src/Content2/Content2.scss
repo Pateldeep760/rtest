@@ -1,0 +1,8 @@
+@import '../Mixin.scss';
+
+.content2{
+h1{
+    @include bgc(maroon);
+}
+
+}

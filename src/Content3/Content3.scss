@@ -1,0 +1,8 @@
+@import '../Mixin.scss';
+
+.content3{
+h1{
+    @include bgc(blue);
+}
+
+}
