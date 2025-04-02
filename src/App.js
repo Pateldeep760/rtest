@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import UserCard from './UserCard/UserCard';
+import pic11 from './Asset/1.jpg';
+import pic21 from './Asset/2.jpg';  
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>User Card </h1>
+      <UserCard
+        name="John Doe"
+        email="john.doe@example.com"
+        profilePicture= {pic11}
+      />
+      <UserCard
+        name="Deepak Kumar"
+        email="deepakkumar@example.com"
+        profilePicture= {pic21}
+      />
     </div>
   );
 }

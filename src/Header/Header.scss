@@ -1,12 +1,57 @@
 @import '../Mixin.scss';
 
+.header-container{
+    display: flex;
+    background-color: wheat;
+}
 .header-m {
-    
-    @include bgc(wheat);
+    position: relative;
+    padding: 10px;
+    background-color: wheat;
+    cursor: pointer;
 
-    button{
-        margin: 10px 10px;
+    .menu-title {
+        font-size: 18px;
+        font-weight: bold;
+        border: 1px solid black;
+        width: fit-content;
+        padding: 5px 5px;
+    }
+
+    .header-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        display: none;
+        z-index: 1000;
+        width: 150px;
+    }
+
+    .header-list li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-list button {
+        padding: 10px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        border: none;
+        background: none;
+    }
+
+    .header-list button:hover {
+        background-color: #e6e6e6;
+    }
+
+    &:hover .header-list {
+        display: block;
     }
 }
-
-

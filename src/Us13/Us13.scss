@@ -1,0 +1,15 @@
+.Us13Main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightblue;
+    align-items: center;
+    gap: 10px;
+    height: 450px;
+    button{
+        height: 30px;
+        margin: 10px 10px;
+        cursor: pointer;
+    }
+}

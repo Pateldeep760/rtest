@@ -5,7 +5,8 @@ const Content2=()=>{
 
     return(
         <div className='content2'>
-        <h1>this is a main Content2</h1>
+        <h1>About Page</h1>
+        <h2>This is the About Page</h2>
         </div>
        
     )
