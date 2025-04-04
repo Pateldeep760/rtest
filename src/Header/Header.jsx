@@ -117,6 +117,22 @@ const Header = () => {
           </li>
         </ul>
       </div>
+
+      <div className="header-m">
+        <div className="menu-title">Use Effect<FaCode /></div> 
+        <ul className="header-list">
+          <li>
+            <button onClick={() => ab('/Ue1')} title="UseEffect-1">
+              UseEffect1 ex<MdOutlineWebhook size={15} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => ab('/Ue2')} title="UseEffect-2">
+              Ueffect Practice <MdOutlineWebhook size={15} />
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
 
 

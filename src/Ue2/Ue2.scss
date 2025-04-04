@@ -1,0 +1,40 @@
+
+.Ue2Main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+  
+    .count1, .count2, .count3, .count4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px 15px;
+      width: 150px;
+      
+    }
+  
+    
+    div {
+      color: #00aaff; 
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333; 
+      margin: 0;
+    }
+  
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+      color: #555; 
+      margin: 5px 0 0;
+    }
+  }

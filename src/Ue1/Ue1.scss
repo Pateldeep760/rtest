@@ -1,12 +1,13 @@
 
 
-.Us1Main{
-    background-color: lightblue;
+.Ue1Main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 450px;
+    background-color: lightblue;
     align-items: center;
-    
+    height: 450px;
+    margin:auto;
     button{
         margin: 10px 10px;
         height: 50px;

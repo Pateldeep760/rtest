@@ -29,6 +29,8 @@ import Us13 from './Us13/Us13';
 import Us14 from './Us14/Us14';
 import ButtonComponent from './ButtonScss/ButtonComponent';
 import Product from './Product/Product';
+import Ue1 from './Ue1/Ue1';
+import Ue2 from './Ue2/Ue2';
 
 
 
@@ -62,6 +64,8 @@ root.render(
         <Route path='/UserCard' element={<App />} />
         <Route path='/ButtonScss' element={<ButtonComponent />} />
         <Route path='/ProductDetails' element={<Product />} />
+        <Route path='/Ue1' element={<Ue1 />} />
+        <Route path='/Ue2' element={<Ue2 />} />
         
       </Routes>
       <Footer/>
