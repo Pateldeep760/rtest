@@ -15,33 +15,44 @@ const Ue2 = () => {
     
 
     useEffect(() => {
+
+        if(count1<300){
         setTimeout(() => {
-            if (count1 < 299) {
-                setCount1((count1) => count1 + 1);
-            }
-        }, 10);
+          
+                setCount1( count1 + 1);
+            
+        }, 5);
+    }
     });
+
     useEffect(() => {
-        setTimeout(() => {
-            if (count2 < 93) {
-                setCount2((count2) => count2 + 1);
-            }
-        }, 500);
+
+        if(count2<94){
+            setTimeout(() => {
+                setCount2( count2 + 1);
+            }, 10);
+        }
     });
+
     useEffect(() => {
-        setTimeout(() => {
-            if (count3 < 49) {
-                setCount3((count3) => count3 + 1);
-            }
-        }, 400);
+
+        if(count3<50){
+            setTimeout(() => {
+                setCount3( count3 + 1);
+            }, 10);
+        }
     });
+
     useEffect(() => {
-        setTimeout(() => {
-            if (count4 < 49) {
-                setCount4((count4) => count4 + 1);
-            }
-        }, 400);
+
+        if(count4<60){
+            setTimeout(() => {
+                setCount4( count4 + 1);
+            }, 10);
+        }
     });
+
+
 
     return (
         <div className='Ue2Main'>

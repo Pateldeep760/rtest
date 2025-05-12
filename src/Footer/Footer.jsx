@@ -1,7 +1,10 @@
+import { useContext } from 'react'
 import './Footer.scss'
 
 
+
 const Footer=()=>{
+   
 
     return(
         <div class = "Mainfooter">

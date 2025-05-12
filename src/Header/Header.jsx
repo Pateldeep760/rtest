@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Header.scss'
 
@@ -7,11 +7,17 @@ import { FaCode, FaHome, FaUser } from 'react-icons/fa'
 import { IoIosInformationCircle } from 'react-icons/io'
 import { SiGoogletasks } from 'react-icons/si'
 import { RxSwitch } from 'react-icons/rx'
+import ValuePackage from '../Context/ValuePackage'
+import { AiFillApi } from 'react-icons/ai'
+
 
 const Header = () => {
+  
+  const { Modal, setModel } = useContext(ValuePackage)
+  
   const ab = useNavigate()
   return (
-    <div className="header-container">
+    <div className="header-container" >
       <div className="header-m">
         <div className="menu-title">Daily Task <SiGoogletasks /> </div> 
         <ul className="header-list">
@@ -131,8 +137,35 @@ const Header = () => {
               Ueffect Practice <MdOutlineWebhook size={15} />
             </button>
           </li>
+          <li>
+            <button onClick={() => ab('/LSS1')} title="Local & Session Storage">
+              Local & Session Strge <MdOutlineWebhook size={15} />
+            </button>
+          </li>
         </ul>
       </div>
+
+      <div className="header-m">
+        <div className="menu-title">Code Practice<FaCode /></div> 
+        <ul className="header-list">
+          <li>
+            <button onClick={() => ab('/CP1')} title="Code Practice-1">
+              Use Context<MdOutlineWebhook size={15} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => ab('/Api')} title="API">
+             API<AiFillApi size={15} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => ab('/NestingJson')} title="Nesting">
+             Nesting<AiFillApi size={15} />
+            </button>
+          </li>
+        </ul>
+      </div>
+     
     </div>
 
 

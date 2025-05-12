@@ -31,15 +31,23 @@ import ButtonComponent from './ButtonScss/ButtonComponent';
 import Product from './Product/Product';
 import Ue1 from './Ue1/Ue1';
 import Ue2 from './Ue2/Ue2';
+import LSS1 from './LocalSessionStorage/LSS1';
+import CodePractice from './CP/CodePractice';
+import Api from './Api/Api';
+import Nesting from './Nesting/Nesting';  
+
+import ValuePackageProvider from './Context/ValuePackageProvider';
+import NestingJson from './Nesting/NestingJson';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
     <BrowserRouter>
+    <ValuePackageProvider>
       <Header/>
+
       <Routes>
         <Route path='/' element={<Content />} />
         <Route path='/content' element={<Content />} />
@@ -66,9 +74,16 @@ root.render(
         <Route path='/ProductDetails' element={<Product />} />
         <Route path='/Ue1' element={<Ue1 />} />
         <Route path='/Ue2' element={<Ue2 />} />
+        <Route path='/LSS1' element={<LSS1 />} />
+        <Route path='/CP1' element={<CodePractice />} />
+        <Route path='/Api' element={<Api/>} />
+        <Route path='/Nesting' element={<Nesting />} />
+        <Route path='/NestingJson' element={<NestingJson />} />
+
         
       </Routes>
       <Footer/>
+      </ValuePackageProvider>
     </BrowserRouter>
 
   </React.StrictMode>
