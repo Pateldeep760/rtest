@@ -31,13 +31,19 @@ import ButtonComponent from './ButtonScss/ButtonComponent';
 import Product from './Product/Product';
 import Ue1 from './Ue1/Ue1';
 import Ue2 from './Ue2/Ue2';
+import ScrollToTop from "react-scroll-to-top";
 import LSS1 from './LocalSessionStorage/LSS1';
 import CodePractice from './CP/CodePractice';
 import Api from './Api/Api';
-import Nesting from './Nesting/Nesting';  
+import Nesting from './Nesting/Nesting';
 
 import ValuePackageProvider from './Context/ValuePackageProvider';
 import NestingJson from './Nesting/NestingJson';
+import GoToTop from './GoToTop';
+import { BiArrowFromLeft } from 'react-icons/bi';
+import Use from './Use';
+import Toypage from './Toys/Toypage';
+
 
 
 
@@ -45,44 +51,49 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <ValuePackageProvider>
-      <Header/>
+      <ValuePackageProvider>
+        <Header />
+        <GoToTop />
+        <ScrollToTop smooth
+          component={<BiArrowFromLeft size={19} />} />
 
-      <Routes>
-        <Route path='/' element={<Content />} />
-        <Route path='/content' element={<Content />} />
-        <Route path='/content2' element={<Content2 />} />
-        <Route path='/content3' element={<Content3 />} />
-        <Route path='*' element={<Nopage />} />
-        <Route path='/Us1' element={<Us1 />} />
-        <Route path='/Us2' element={<Us2 />} />
-        <Route path='/Us3' element={<Us3 />} />
-        <Route path='/Us4' element={<Us4 />} />
-        <Route path='/Us5' element={<Us5 />} />
-        <Route path='/Us6' element={<Us6 />} />
-        <Route path='/Us7' element={<Us7 />} />
-        <Route path='/Us8' element={<Us8 />} />
-        <Route path='/Us9' element={<Us9 />} />
-        <Route path='/Us10' element={<Us10 />} />
-        <Route path='/Us11' element={<Us11 />} />
-        <Route path='/Us12' element={<Us12 />} />
-        <Route path='/Us13' element={<Us13 />} />
-        <Route path='/Us14' element={<Us14 />} />
-        <Route path='/UserCard' element={<App />} />
-        <Route path='/UserCard' element={<App />} />
-        <Route path='/ButtonScss' element={<ButtonComponent />} />
-        <Route path='/ProductDetails' element={<Product />} />
-        <Route path='/Ue1' element={<Ue1 />} />
-        <Route path='/Ue2' element={<Ue2 />} />
-        <Route path='/LSS1' element={<LSS1 />} />
-        <Route path='/CP1' element={<CodePractice />} />
-        <Route path='/Api' element={<Api/>} />
-        <Route path='/Nesting' element={<Nesting />} />
-        <Route path='/NestingJson' element={<NestingJson />} />
+        <Routes>
+          {/* <Route path='/:name' element={<Use />} /> */}
+          <Route path='/:pagename' element={<Toypage />} />
+          <Route path='/' element={<Content />} />
+          <Route path='/content' element={<Content />} />
+          <Route path='/content2' element={<Content2 />} />
+          <Route path='/content3' element={<Content3 />} />
+          <Route path='*' element={<Nopage />} />
+          <Route path='/us1' element={<Us1 />} />
+          <Route path='/us2' element={<Us2 />} />
+          <Route path='/Us3' element={<Us3 />} />
+          <Route path='/Us4' element={<Us4 />} />
+          <Route path='/Us5' element={<Us5 />} />
+          <Route path='/Us6' element={<Us6 />} />
+          <Route path='/Us7' element={<Us7 />} />
+          <Route path='/Us8' element={<Us8 />} />
+          <Route path='/Us9' element={<Us9 />} />
+          <Route path='/Us10' element={<Us10 />} />
+          <Route path='/Us11' element={<Us11 />} />
+          <Route path='/Us12' element={<Us12 />} />
+          <Route path='/Us13' element={<Us13 />} />
+          <Route path='/Us14' element={<Us14 />} />
+          <Route path='/UserCard' element={<App />} />
+          <Route path='/UserCard' element={<App />} />
+          <Route path='/ButtonScss' element={<ButtonComponent />} />
+          <Route path='/ProductDetails' element={<Product />} />
+          <Route path='/Ue1' element={<Ue1 />} />
+          <Route path='/Ue2' element={<Ue2 />} />
+          <Route path='/LSS1' element={<LSS1 />} />
+          <Route path='/CP1' element={<CodePractice />} />
+          <Route path='/Api' element={<Api />} />
+          <Route path='/Nesting' element={<Nesting />} />
+          <Route path='/NestingJson' element={<NestingJson />} />
 
-        
-      </Routes>
-      <Footer/>
+
+        </Routes>
+        <Footer />
       </ValuePackageProvider>
     </BrowserRouter>
 

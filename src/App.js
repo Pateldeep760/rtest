@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>User Card </h1>
+      
       <UserCard
         name="John Doe"
         email="john.doe@example.com"

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import './Header.scss'
 
 import { MdOutlineProductionQuantityLimits, MdOutlineWebhook } from 'react-icons/md'
@@ -9,13 +9,22 @@ import { SiGoogletasks } from 'react-icons/si'
 import { RxSwitch } from 'react-icons/rx'
 import ValuePackage from '../Context/ValuePackage'
 import { AiFillApi } from 'react-icons/ai'
+import Us1 from '../Us1/Us1'
+import { MdOutlineDynamicFeed } from "react-icons/md";
 
 
 const Header = () => {
+  const list = ['/us1','/us2']
+
+  const location = useLocation()
   
   const { Modal, setModel } = useContext(ValuePackage)
   
   const ab = useNavigate()
+
+  if(list.includes(location.pathname)){
+    return null
+  }
   return (
     <div className="header-container" >
       <div className="header-m">
@@ -161,6 +170,11 @@ const Header = () => {
           <li>
             <button onClick={() => ab('/NestingJson')} title="Nesting">
              Nesting<AiFillApi size={15} />
+            </button>
+          </li>
+          <li>
+            <button onClick={() => ab('/Toypage')} title="Nesting">
+             UsePrams<MdOutlineDynamicFeed size={15} />
             </button>
           </li>
         </ul>

@@ -1,28 +1,29 @@
 import React, { use } from 'react'
 import Axios from 'axios'
 import ApiData from './ApiData'
+import Typewriter from "typewriter-effect";
 
 import { useEffect, useState } from 'react'
 
 const Api = () => {
 
 
-    const [Api1, setApi1] = useState([])
+  const [Api1, setApi1] = useState([])
 
-    useEffect(() => {
+  useEffect(() => {
 
-        Axios.get('https://jsonplaceholder.typicode.com/todos')
-            .then((response) => {
-                setApi1(response.data)
-                console.log(response.data)
-                setApi1(response.data)
-            })
-    }, [])
+    Axios.get('https://jsonplaceholder.typicode.com/todos')
+      .then((response) => {
+        setApi1(response.data)
+        console.log(response.data)
+        setApi1(response.data)
+      })
+  }, [])
 
 
-    return (
-        <div>
-            <h1>Api Data Fetching</h1>
+  return (
+    <div>
+      <h1>Api Data Fetching</h1>
       <table border="1" style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
         <thead>
           <tr>
@@ -41,21 +42,30 @@ const Api = () => {
           ))}
         </tbody>
       </table>
-      <hr/>
-          <h1>API Fetch from Fake API</h1>
-          {
-            Api1.
-            slice(0, 10).
-            map((item) => {
-                return (
-                    <div>
-                        <h3>{item.id}</h3>
-                        <h3>{item.title}</h3>
-                        <h3>{item.completed ? "Completed" : "Not Completed"}</h3>
-                    </div>
-                )
-            })
-          }
+      <hr />
+      <h1>API Fetch from Fake API</h1>
+      {
+        Api1.
+          slice(0, 10).
+          map((item) => {
+            return (
+              <div>
+                <h3>{item.id}</h3>
+                <h3>
+                  <Typewriter
+                    options={{
+                      strings: [item.title, 'World'],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+
+                </h3>
+                <h3>{item.completed ? "Completed" : "Not Completed"}</h3>
+              </div>
+            )
+          })
+      }
 
 
     </div>
