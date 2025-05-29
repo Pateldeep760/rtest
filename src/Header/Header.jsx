@@ -177,6 +177,11 @@ const Header = () => {
              UsePrams<MdOutlineDynamicFeed size={15} />
             </button>
           </li>
+          <li>
+            <button onClick={() => ab('/Inqform')} title="Nesting">
+             Inquryform<MdOutlineDynamicFeed size={15} />
+            </button>
+          </li>
         </ul>
       </div>
      

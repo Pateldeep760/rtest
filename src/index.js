@@ -43,6 +43,7 @@ import GoToTop from './GoToTop';
 import { BiArrowFromLeft } from 'react-icons/bi';
 import Use from './Use';
 import Toypage from './Toys/Toypage';
+import Inqform from './InqForm/Inqform';
 
 
 
@@ -90,6 +91,8 @@ root.render(
           <Route path='/Api' element={<Api />} />
           <Route path='/Nesting' element={<Nesting />} />
           <Route path='/NestingJson' element={<NestingJson />} />
+          <Route path='/Inqform' element={<Inqform />} />
+        
 
 
         </Routes>
